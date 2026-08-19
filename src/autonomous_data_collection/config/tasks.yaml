@@ -1,0 +1,48 @@
+---
+collect_news_and_trends:
+  description: Search for the latest news articles and trend reports about {topic}
+    in the context of Industry and Society. Focus on developments from the past 12
+    months, identifying key themes, emerging trends, and notable events.
+  expected_output: A structured summary of the latest news and emerging trends related
+    to {topic}, including key themes, notable events, and sources.
+  agent: news_trends_specialist_in_industry_and_society
+  async_execution: true
+collect_academic_research:
+  description: Search for recent academic papers and research publications on {topic}
+    in the context of Industry and Society. Focus on peer-reviewed studies, key methodologies,
+    and findings from the past 5 years.
+  expected_output: A list of key academic findings, methodologies, and conclusions
+    related to {topic} with sources and publication details.
+  agent: academic_research_specialist_in_industry_and_society
+  async_execution: true
+collect_market_data_and_statistics:
+  description: Collect market size, statistics, forecasts, and key quantitative data
+    points related to {topic} in Industry and Society. Look for reports from market
+    research firms, government agencies, and industry associations.
+  expected_output: A structured set of market statistics, data points, and forecasts
+    related to {topic}, with sources cited.
+  agent: market_data_statistics_analyst
+  async_execution: true
+collect_social_impact_reports:
+  description: Find social impact reports, policy documents, and societal analyses
+    related to {topic} in the context of Industry and Society. Identify affected communities,
+    societal effects, and policy implications.
+  expected_output: A summary of social impacts, affected communities, policy implications,
+    and key recommendations related to {topic}, with sources.
+  agent: social_impact_research_specialist
+  async_execution: true
+compile_and_publish_report_to_google_docs:
+  description: 'Synthesize all findings from the research tasks into a comprehensive,
+    well-structured markdown report about {topic} in Industry and Society. The report
+    should have the following sections: 1) Executive Summary, 2) News & Trends, 3)
+    Academic Research, 4) Market Data & Statistics, 5) Social Impact & Policy, 6)
+    Conclusion. Then create a new Google Doc with this formatted report.'
+  expected_output: A Google Doc containing the full formatted report on {topic} in
+    Industry and Society, with all sections properly filled with data from the research
+    tasks.
+  agent: report_writer_and_publisher
+  context:
+  - collect_news_and_trends
+  - collect_academic_research
+  - collect_market_data_and_statistics
+  - collect_social_impact_reports
