@@ -1,4 +1,4 @@
-# AGENTS.md — CrewAI Reference for AI Coding Assistants
+# AGENTS.md
 
 > **Auto-generated** by `crewai create`. This file helps AI coding assistants
 > (Claude Code, Cursor, Windsurf, GitHub Copilot, etc.) write correct CrewAI code.
